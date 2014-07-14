@@ -25,4 +25,5 @@ HEADERS += \
     common-space3d-coordinate.h \
     common-space3d-axisrotationarbitrary.h \
     common-imatrix.h \
-    common-math.h
+    common-math.h \
+    common-array.h
