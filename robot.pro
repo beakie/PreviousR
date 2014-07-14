@@ -18,6 +18,11 @@ TEMPLATE = app
 SOURCES += main.cpp
 
 HEADERS += \
-    imatrix.h \
-    matrix4.h \
-    matrix3d.h
+    common-matrix4.h \
+    common-ivector.h \
+    common-vector3.h \
+    common-space3d-helpers.h \
+    common-space3d-coordinate.h \
+    common-space3d-axisrotationarbitrary.h \
+    common-imatrix.h \
+    common-math.h

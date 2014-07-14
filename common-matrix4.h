@@ -1,7 +1,7 @@
 #ifndef MATRIX4_H
 #define MATRIX4_H
 
-#include "imatrix.h"
+#include "common-imatrix.h"
 
 namespace Common
 {
@@ -136,7 +136,7 @@ struct Matrix4 : public IMatrix<TVALUE, unsigned char, Matrix4<TVALUE> >
         return *this * matrix;
     }
 
-    ~Matrix4()
+    virtual ~Matrix4()
     {
     }
 
