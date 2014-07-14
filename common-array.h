@@ -10,8 +10,8 @@ template <typename T>
 struct Array {
 
 private:
-    unsigned int Count;
     unsigned int Capacity;
+    unsigned int Count;
 
 public:
     T *Items;
@@ -29,7 +29,7 @@ public:
         Capacity = copy.Capacity;
         Items = 0;
         Items = new T[Capacity];
-        for (int i = 0; i < Count; i++)
+        for (unsigned int i = 0; i < Count; i++)
             Items[i] = copy.Items[i];
     }
 
@@ -54,7 +54,7 @@ public:
     void addArray(const Array<T> &array)
     {
         //could be more efficient if only resizes once and then copies all items into the array itself
-        for (int i = 0; i < array.Count; i++)
+        for (int unsigned i = 0; i < array.Count; i++)
             addItem(array[i]);
     }
 
@@ -62,10 +62,18 @@ public:
     {
         Capacity = Capacity ? Capacity * 2 : 1;
         T *x = new T[Capacity];
-        for (int i = 0; i < Count; i++)
-            x[i] = items[i];
-        delete[] items;
-        items = x;
+        for (unsigned int i = 0; i < Count; i++)
+            x[i] = Items[i];
+        delete[] Items;
+        Items = x;
+    }
+
+    void clear()
+    {
+        delete[] Items;
+
+        Capacity = 0;
+        Count = 0;
     }
 
     Array<T> & operator+(const T &item)
@@ -87,8 +95,32 @@ public:
         return *this + array;
     }
 
+    Array<T> & operator++()
+    {
+        return this->operator ++(0);
+    }
+
+    Array<T> & operator++(int)
+    {
+        resize();
+
+        return *this;
+    }
+
+    Array<T> & operator--()
+    {
+        return this->operator --(0);
+    }
+
+    Array<T> & operator--(int)
+    {
+        clear();
+
+        return *this;
+    }
+
     ~Array() {
-        delete[] items;
+        delete[] Items;
     }
 };
 

@@ -17,7 +17,17 @@ int main(int argc, char *argv[])
 
     Common::Array<int> array;
     array.addItem(1);
-    array += 1;
+    //array += 1;
+    array.operator ++();
+    array.operator ++(0);
+    array++;
+    ++array;
+    array.resize();
+    array.operator --();
+    array.operator --(0);
+    array--;
+    --array;
+    array.clear();
 
     // +=(T) additem
     // +=(Array<T>) addItems
