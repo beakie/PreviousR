@@ -16,3 +16,8 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp
+
+HEADERS += \
+    imatrix.h \
+    matrix4.h \
+    matrix3d.h
