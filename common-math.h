@@ -26,13 +26,13 @@ public:
     }
 
     template <typename T>
-    T DegreeToRadian(T value)
+    T degreeToRadian(T value)
     {
         return (T)(Pi * ((float)value) / 180.0);
     }
 
     template <typename T>
-    T RadianToDegree(T value)
+    T radianToDegree(T value)
     {
         return (T)(((float)value) * (180.0 / Pi));
     }
