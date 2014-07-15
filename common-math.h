@@ -26,18 +26,24 @@ public:
     }
 
     template <typename T>
-    T degreeToRadian(T value)
+    static T degreeToRadian(T value)
     {
-        return (T)(Pi * ((float)value) / 180.0);
+        return (T)(Pi * value / 180.0);
     }
 
     template <typename T>
-    T radianToDegree(T value)
+    static T radianToDegree(T value)
     {
-        return (T)(((float)value) * (180.0 / Pi));
+        return (T)(value * (180.0 / Pi));
     }
 
-    static const float Pi = 3.1415926534;
+    template <typename T>
+    static T power(T value, T p)
+    {
+        return 0; // BALLLLLLSSSSS (todo). make operator too.
+    }
+
+    static const long double Pi = 3.14159265358979323846; // acos(-1)
 };
 
 }

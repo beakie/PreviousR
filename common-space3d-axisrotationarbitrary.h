@@ -8,12 +8,12 @@
 namespace Common
 {
 
-namespace Space3D
+namespace Space3d
 {
 
 struct AxisRotationArbitrary
 {
-    Common::Space3D::Coordinate Axis;
+    Common::Space3d::Coordinate Axis;
     float Rotation;
 
     AxisRotationArbitrary()
@@ -21,7 +21,7 @@ struct AxisRotationArbitrary
 
     }
 
-    AxisRotationArbitrary(const Common::Space3D::Coordinate axis, const float rotation)
+    AxisRotationArbitrary(const Common::Space3d::Coordinate axis, const float rotation)
     {
         Axis = axis;
         Rotation = rotation;
@@ -38,7 +38,7 @@ struct AxisRotationArbitrary
     Matrix4<float> getMatrix()
     {
         float c = Common::Math::cos(Rotation);
-        float c_ = 1 - c;
+        float c_ = 1.0f - c;
         float s = Common::Math::sin(Rotation);
         Matrix4<float> matrix;
         matrix.values[0][0] = (Axis.values[0] * Axis.values[0]) + ((1 - (Axis.values[0] * Axis.values[0])) * c);

@@ -142,6 +142,6 @@ struct Matrix4 : public IMatrix<TVALUE, unsigned char, Matrix4<TVALUE> >
 
 };
 
-};
+}
 
 #endif // MATRIX4_H

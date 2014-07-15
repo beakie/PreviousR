@@ -90,6 +90,11 @@ public:
         return *this;
     }
 
+    Array<T> & operator+=(const T &item)
+    {
+        return *this + item;
+    }
+
     Array<T> & operator+=(const Array<T> &array)
     {
         return *this + array;

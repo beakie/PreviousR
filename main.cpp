@@ -11,13 +11,13 @@ int main(int argc, char *argv[])
     matrix4.set(0);
     matrix4.get(1, 1);
 
-    matrix4 *= (new Common::Space3D::AxisRotationArbitrary(0, 0, 0, 0))->getMatrix();
+    matrix4 *= (new Common::Space3d::AxisRotationArbitrary(0, 0, 0, 0))->getMatrix();
 
-    matrix4 *= Common::Space3D::Helpers::getAxisRotationMatrix(0, 0, 0, 0);
+    matrix4 *= Common::Space3d::Helpers::getAxisRotationMatrix(0, 0, 0, 0);
 
-    Common::Array<int> array;
+    Common::Array<float> array;
     array.addItem(1);
-    //array += 1;
+    array += 1;
     array.operator ++();
     array.operator ++(0);
     array++;
@@ -28,10 +28,6 @@ int main(int argc, char *argv[])
     array--;
     --array;
     array.clear();
-
-    // +=(T) additem
-    // +=(Array<T>) addItems
-    // ++(T) resize
 
     return a.exec();
 }

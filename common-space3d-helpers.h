@@ -8,7 +8,7 @@
 namespace Common
 {
 
-namespace Space3D
+namespace Space3d
 {
 
 class Helpers
