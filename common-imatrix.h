@@ -17,9 +17,9 @@ public:
     virtual TIMPLEMENTATION & multiply(const TIMPLEMENTATION &matrix) = 0;
     virtual TIMPLEMENTATION & operator=(const TVALUE &value) = 0;
     virtual TIMPLEMENTATION & operator=(const TIMPLEMENTATION &matrix) = 0;
-    virtual bool operator==(const TIMPLEMENTATION &matrix) = 0;
     virtual TIMPLEMENTATION & operator*(const TIMPLEMENTATION &matrix) = 0;
     virtual TIMPLEMENTATION & operator*=(const TIMPLEMENTATION &matrix) = 0;
+    virtual bool operator==(const TIMPLEMENTATION &matrix) = 0;
     virtual ~IMatrix() { }
 };
 

@@ -92,16 +92,6 @@ struct Matrix3 : public IMatrix<TVALUE, unsigned char, Matrix3<TVALUE> >
         return *this;
     }
 
-    bool operator==(const Matrix3<TVALUE> &matrix)
-    {
-        for(unsigned char x = 0; x < 3; x++)
-            for(unsigned char y = 0; y < 3; y++)
-                if(values[x][y] != matrix.values[x][y])
-                    return false;
-
-        return true;
-    }
-
     Matrix3<TVALUE> & operator*(const Matrix3<TVALUE> &matrix)
     {
          set((values[0][0] * matrix.values[0][0]) + (values[0][1] * matrix.values[1][0]) + (values[0][2] * matrix.values[2][0]),
@@ -120,6 +110,16 @@ struct Matrix3 : public IMatrix<TVALUE, unsigned char, Matrix3<TVALUE> >
     Matrix3<TVALUE> & operator*=(const Matrix3<TVALUE> &matrix)
     {
         return *this * matrix;
+    }
+
+    bool operator==(const Matrix3<TVALUE> &matrix)
+    {
+        for(unsigned char x = 0; x < 3; x++)
+            for(unsigned char y = 0; y < 3; y++)
+                if(values[x][y] != matrix.values[x][y])
+                    return false;
+
+        return true;
     }
 
     virtual ~Matrix3()

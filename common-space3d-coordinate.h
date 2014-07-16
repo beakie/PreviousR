@@ -27,10 +27,30 @@ struct Coordinate: Vector3<float>
         return values[2];
     }
 
-    float getLength()
+    float distanceFrom(Coordinate coordinate)
     {
-        // todo. make operator calls
-        return Common::Math::power((values[0] * values[0]) * (values[1] * values[1]) * (values[2] * values[2]), 0.5f);
+        return Common::Math::power(Common::Math::power(coordinate.values[0] - values[0], 2) + Common::Math::power(coordinate.values[1] - values[1], 2) + Common::Math::power(coordinate.values[2] - values[2], 2), 0.5);
+    }
+
+    Coordinate & operator+(const Coordinate &coordinate)
+    {
+        Vector3::operator +((Vector3<float>)coordinate);
+
+        return *this;
+    }
+
+    Coordinate & operator-(const Coordinate &coordinate)
+    {
+        Vector3::operator -((Vector3<float>)coordinate);
+
+        return *this;
+    }
+
+    Coordinate & operator=(const Coordinate &coordinate)
+    {
+        Vector3::operator =((Vector3<float>)coordinate);
+
+        return *this;
     }
 
     virtual ~Coordinate() { }

@@ -8,37 +8,37 @@ class Math
 {
 public:
     template <typename T>
-    static T sin(T value)
+    static T sin(const T value)
     {
         return value;
     }
 
     template <typename T>
-    static T cos(T value)
+    static T cos(const T value)
     {
         return value;
     }
 
     template <typename T>
-    static T tan(T value)
+    static T tan(const T value)
     {
         return value;
     }
 
     template <typename T>
-    static T degreeToRadian(T value)
+    static T degreeToRadian(const T value)
     {
         return (T)(Pi * value / 180.0);
     }
 
     template <typename T>
-    static T radianToDegree(T value)
+    static T radianToDegree(const T value)
     {
         return (T)(value * (180.0 / Pi));
     }
 
-    template <typename T>
-    static T power(T value, T p)
+    template <typename T1, typename T2>
+    static T1 power(const T1 value, const T2 p)
     {
         return 0; // BALLLLLLSSSSS (todo). make operator too.
     }

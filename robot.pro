@@ -32,4 +32,11 @@ HEADERS += \
     common-space2d-plot.h \
     common-matrix3.h \
     common-matrix2.h \
-    common-space3d-linesegment3d.h
+    common-space2d-linedistanceangle.h \
+    common-space2d-linesegment.h \
+    common-space3d-linesegment.h \
+    common-space2d-lineslopeintercept.h \
+    common.h \
+    common-space2d.h \
+    common-space3d.h \
+    root.h

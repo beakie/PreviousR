@@ -35,7 +35,7 @@ struct AxisRotationArbitrary
         Rotation = rotation;
     }
 
-    Matrix4<float> getMatrix()
+    Matrix4<float> getRotationMatrix()
     {
         float c = Common::Math::cos(Rotation);
         float c_ = 1.0f - c;

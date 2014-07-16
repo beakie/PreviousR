@@ -34,6 +34,38 @@ struct Vector3
         return vector;
     }
 
+    Vector3<TVALUE> & operator+(const Vector3<TVALUE> &vector)
+    {
+        values[0] = values[0] + vector.values[0];
+        values[1] = values[1] + vector.values[1];
+        values[2] = values[2] + vector.values[2];
+
+         return *this;
+    }
+
+    Vector3<TVALUE> & operator-(const Vector3<TVALUE> &vector)
+    {
+        values[0] = values[0] - vector.values[0];
+        values[1] = values[1] - vector.values[1];
+        values[2] = values[2] - vector.values[2];
+
+         return *this;
+    }
+
+    Vector3<TVALUE> & operator=(const Vector3<TVALUE> &vector)
+    {
+        values[0] = vector.values[0];
+        values[1] = vector.values[1];
+        values[2] = vector.values[2];
+
+        return *this;
+    }
+
+    bool operator==(const Vector3<TVALUE> &vector)
+    {
+        return (vector.values[0] == values[0]) && (vector.values[1] == values[1]) && (vector.values[2] == values[2]);
+    }
+
     virtual ~Vector3() { }
 };
 

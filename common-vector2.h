@@ -19,6 +19,45 @@ struct Vector2
         values[1] = b;
     }
 
+    TVALUE dotProduct(const Vector2<TVALUE> &v)
+    {
+        return (values[0] * v.values[0] + values[1] * v.values[1]);
+    }
+
+    TVALUE crossProduct(const Vector2<TVALUE> &v)
+    {
+        return (values[0] * v.values[1]) - (values[1] * v.values[0]);
+    }
+
+    Vector2<TVALUE> & operator+(const Vector2<TVALUE> &vector)
+    {
+        values[0] = vector.values[0] + values[0];
+        values[1] = vector.values[1] + values[1];
+
+         return *this;
+    }
+
+    Vector2<TVALUE> & operator-(const Vector2<TVALUE> &vector)
+    {
+        values[0] = vector.values[0] - values[0];
+        values[1] = vector.values[1] - values[1];
+
+         return *this;
+    }
+
+    Vector2<TVALUE> & operator=(const Vector2<TVALUE> &vector)
+    {
+        values[0] = vector.values[0];
+        values[1] = vector.values[1];
+
+        return *this;
+    }
+
+    bool operator==(const Vector2<TVALUE> &vector)
+    {
+        return (vector.values[0] == values[0]) && (vector.values[1] == values[1]);
+    }
+
     virtual ~Vector2() { }
 };
 

@@ -26,7 +26,7 @@ public:
 
     static Matrix4<float> getAxisRotationMatrix(float x, float y, float z, float rotation)
     {
-        return (new AxisRotationArbitrary(x, y, z, rotation))->getMatrix();
+        return (new AxisRotationArbitrary(x, y, z, rotation))->getRotationMatrix();
     }
 
     virtual ~Helpers() { }
