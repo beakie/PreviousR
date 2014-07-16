@@ -22,7 +22,6 @@ HEADERS += \
     common-vector3.h \
     common-space3d-helpers.h \
     common-space3d-coordinate.h \
-    common-space3d-axisrotationarbitrary.h \
     common-imatrix.h \
     common-math.h \
     common-array.h \
@@ -39,4 +38,22 @@ HEADERS += \
     common.h \
     common-space2d.h \
     common-space3d.h \
-    root.h
+    root.h \
+    common-space3d-eulerangles.h \
+    common-space3d-rotationorder.h \
+    common-space3d-rotationxyx.h \
+    common-space3d-rotationxyz.h \
+    common-space3d-rotationxzx.h \
+    common-space3d-rotationxzy.h \
+    common-space3d-rotationyxy.h \
+    common-space3d-rotationyxz.h \
+    common-space3d-rotationyzx.h \
+    common-space3d-rotationyzy.h \
+    common-space3d-rotationzxy.h \
+    common-space3d-rotationzxz.h \
+    common-space3d-rotationzyx.h \
+    common-space3d-rotationzyz.h \
+    common-space3d-taitbryanangles.h \
+    common-space3d-irotation.h \
+    common-space3d-irotationtriple.h \
+    common-space3d-axisangle.h

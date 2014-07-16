@@ -9,8 +9,8 @@ int main(int argc, char *argv[])
     Common::Matrix4<float> matrix4;
     matrix4.set(0);
     matrix4.get(1, 1);
-    matrix4 *= (new Common::Space3d::AxisRotationArbitrary(0, 0, 0, 0))->getRotationMatrix();
-    matrix4 *= Common::Space3d::Helpers::getAxisRotationMatrix(0, 0, 0, 0);
+    matrix4 *= (new Common::Space3d::AxisAngle(0, 0, 0, 0))->getMatrix();
+    matrix4 *= Common::Space3d::Helpers::getRotationMatrix(0, 0, 0, 0);
 
     Common::Array<float> array;
     array.addItem(1);

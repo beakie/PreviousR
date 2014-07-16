@@ -3,7 +3,7 @@
 
 #include "common-matrix4.h"
 #include "common-vector3.h"
-#include "common-space3d-axisrotationarbitrary.h"
+#include "common-space3d-axisangle.h"
 
 namespace Common
 {
@@ -24,9 +24,10 @@ public:
         return matrix;
     }
 
-    static Matrix4<float> getAxisRotationMatrix(float x, float y, float z, float rotation)
+    //overload with other rotation matrix
+    static Matrix4<float> getRotationMatrix(float x, float y, float z, float rotation)
     {
-        return (new AxisRotationArbitrary(x, y, z, rotation))->getRotationMatrix();
+        return (new AxisAngle(x, y, z, rotation))->getMatrix();
     }
 
     virtual ~Helpers() { }

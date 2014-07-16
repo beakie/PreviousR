@@ -4,6 +4,7 @@
 #include "common-math.h"
 #include "common-matrix4.h"
 #include "common-space3d-coordinate.h"
+#include "common-space3d-irotation.h"
 
 namespace Common
 {
@@ -11,35 +12,34 @@ namespace Common
 namespace Space3d
 {
 
-struct AxisRotationArbitrary
+struct AxisAngle: IRotation
 {
     Common::Space3d::Coordinate Axis;
-    float Rotation;
+    float Angle;
 
-    AxisRotationArbitrary()
+    AxisAngle()
     {
-
     }
 
-    AxisRotationArbitrary(const Common::Space3d::Coordinate axis, const float rotation)
+    AxisAngle(const Common::Space3d::Coordinate axis, const float angle)
     {
         Axis = axis;
-        Rotation = rotation;
+        Angle = angle;
     }
 
-    AxisRotationArbitrary(const float x, const float y, const float z, const float rotation)
+    AxisAngle(const float x, const float y, const float z, const float angle)
     {
         Axis.values[0] = x;
         Axis.values[1] = y;
         Axis.values[2] = z;
-        Rotation = rotation;
+        Angle = angle;
     }
 
-    Matrix4<float> getRotationMatrix()
+    Matrix4<float> getMatrix()
     {
-        float c = Common::Math::cos(Rotation);
+        float c = Common::Math::cos(Angle);
         float c_ = 1.0f - c;
-        float s = Common::Math::sin(Rotation);
+        float s = Common::Math::sin(Angle);
         Matrix4<float> matrix;
         matrix.values[0][0] = (Axis.values[0] * Axis.values[0]) + ((1 - (Axis.values[0] * Axis.values[0])) * c);
         matrix.values[0][1] = (Axis.values[0] * Axis.values[1] * c_) + (Axis.values[2] * s);
@@ -54,7 +54,12 @@ struct AxisRotationArbitrary
         return matrix;
     }
 
-    virtual ~AxisRotationArbitrary() { }
+    Quaternion getQuaternion()
+    {
+        return Quaternion();
+    }
+
+    virtual ~AxisAngle() { }
 };
 
 }
