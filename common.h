@@ -11,5 +11,6 @@
 #include "common-unitvector3.h"
 #include "common-vector2.h"
 #include "common-vector3.h"
+#include "common_types.h"
 
 #endif // COMMON_H

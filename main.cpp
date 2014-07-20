@@ -1,6 +1,6 @@
 #include <QCoreApplication>
 
-#include "root.h"
+#include "namespaces.h"
 
 int main(int argc, char *argv[])
 {
@@ -13,13 +13,16 @@ int main(int argc, char *argv[])
     matrix4 *= Common::Space3d::Helpers::getRotationMatrix(0, 0, 0, 0);
 
     Common::Array<float> array;
+
     array.addItem(1);
     array += 1;
+
     array.operator ++();
     array.operator ++(0);
     array++;
     ++array;
     array.resize();
+
     array.operator --();
     array.operator --(0);
     array--;
@@ -38,6 +41,10 @@ int main(int argc, char *argv[])
     p = p - p;
 
     Common::UnitVector3 u;
+
+    Common::Matrix4f m1 = Common::Matrix4<float>();
+
+    Common::Projection3d::OrthographicZ projection();
 
     return a.exec();
 }

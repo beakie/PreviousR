@@ -40,7 +40,7 @@ public:
     template <typename T1, typename T2>
     static T1 power(const T1 value, const T2 p)
     {
-        return 0; // BALLLLLLSSSSS (todo). make operator too.
+        return value + p; // BALLLLLLSSSSS (todo). make operator too.
     }
 
     static const long double Pi = 3.14159265358979323846; // acos(-1)

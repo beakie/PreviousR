@@ -12,6 +12,8 @@ namespace Space3d
 
 struct Coordinate: Vector3<float>
 {
+    using Vector3::Vector3;
+
     float x()
     {
         return values[0];

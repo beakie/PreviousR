@@ -14,9 +14,19 @@ struct LineSegment
     Common::Space2d::Plot From;
     Common::Space2d::Plot To;
 
-    float getLength()
+    float length()
     {
         return From.distanceFrom(To);
+    }
+
+    float x(float y)
+    {
+        return y; // todo
+    }
+
+    float y(float x)
+    {
+        return x; // todo
     }
 };
 

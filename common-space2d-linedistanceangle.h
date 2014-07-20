@@ -13,6 +13,16 @@ struct LineDistanceAngle
 {
     float Distance;
     float Angle;
+
+    float x(float y)
+    {
+        return (y - (Distance / Common::Math::sin(Common::Math::degreeToRadian(Angle)))) / (-(Common::Math::cos(Common::Math::degreeToRadian(Angle)) / Common::Math::sin(Common::Math::degreeToRadian(Angle))));
+    }
+
+    float y(float x)
+    {
+        return (-(Common::Math::cos(Common::Math::degreeToRadian(Angle)) / Common::Math::sin(Common::Math::degreeToRadian(Angle)))) * x + (Distance / Common::Math::sin(Common::Math::degreeToRadian(Angle)));
+    }
 };
 
 }

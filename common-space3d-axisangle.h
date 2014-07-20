@@ -1,5 +1,5 @@
-#ifndef COMMONSPACE3DAXISANGLEARBITRARY_H
-#define COMMONSPACE3DAXISANGLEARBITRARY_H
+#ifndef COMMONSPACE3DAXISANGLE_H
+#define COMMONSPACE3DAXISANGLE_H
 
 #include "common-math.h"
 #include "common-matrix4.h"
@@ -66,4 +66,4 @@ struct AxisAngle: IRotation
 
 }
 
-#endif // COMMONSPACE3DAXISANGLEARBITRARY_H
+#endif // COMMONSPACE3DAXISANGLE_H

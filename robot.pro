@@ -38,22 +38,42 @@ HEADERS += \
     common.h \
     common-space2d.h \
     common-space3d.h \
-    root.h \
-    common-space3d-eulerangles.h \
     common-space3d-rotationorder.h \
-    common-space3d-rotationxyx.h \
-    common-space3d-rotationxyz.h \
-    common-space3d-rotationxzx.h \
-    common-space3d-rotationxzy.h \
-    common-space3d-rotationyxy.h \
-    common-space3d-rotationyxz.h \
-    common-space3d-rotationyzx.h \
-    common-space3d-rotationyzy.h \
-    common-space3d-rotationzxy.h \
-    common-space3d-rotationzxz.h \
-    common-space3d-rotationzyx.h \
-    common-space3d-rotationzyz.h \
-    common-space3d-taitbryanangles.h \
     common-space3d-irotation.h \
-    common-space3d-irotationtriple.h \
-    common-space3d-axisangle.h
+    common-space3d-axisangle.h \
+    common-space3d-euleranglesxyx.h \
+    common-space3d-euleranglesxzx.h \
+    common-space3d-euleranglesyxy.h \
+    common-space3d-euleranglesyzy.h \
+    common-space3d-eulerangleszxz.h \
+    common-space3d-eulerangleszyz.h \
+    common-space3d-taitbryananglesxyz.h \
+    common-space3d-taitbryananglesxzy.h \
+    common-space3d-taitbryananglesyxz.h \
+    common-space3d-taitbryananglesyzx.h \
+    common-space3d-taitbryanangleszxy.h \
+    common-space3d-taitbryanangleszyx.h \
+    common-projection3d.h \
+    common-projection3d-orthographic.h \
+    common-projection3d-weakperspective.h \
+    common-projection3d-perspective.h \
+    common-projection3d-iprojection.h \
+    common_types.h \
+    vision.h \
+    emulation.h \
+    movement.h \
+    namespaces.h \
+    vision-houghtransform.h \
+    vision-itechnique.h \
+    common-space3d-fixedaxisanglex.h \
+    common-space3d-fixedaxisangley.h \
+    common-space3d-fixedaxisanglez.h \
+    common-space3d-fixedaxisangle.h \
+    common-space3d-triplerotation.h \
+    common-projection3d-orthographicx.h \
+    common-projection3d-orthographicy.h \
+    common-projection3d-orthographicz.h \
+    common-projection3d-weakperspectivex.h \
+    common-projection3d-weakperspectivey.h \
+    common-projection3d-weakperspectivez.h \
+    common-space3d-axis3d.h

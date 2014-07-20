@@ -13,6 +13,8 @@ namespace Space2d
 struct Plot : Vector2<float>
 {
 
+    using Vector2::Vector2;
+
     float x()
     {
         return values[0];
