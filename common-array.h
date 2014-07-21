@@ -60,7 +60,12 @@ public:
 
     void resize()
     {
-        Capacity = Capacity ? Capacity * 2 : 1;
+        resize(Capacity ? Capacity * 2 : 1);
+    }
+
+    void resize(unsigned int capacity)
+    {
+        Capacity = capacity;
         T *x = new T[Capacity];
         for (unsigned int i = 0; i < Count; i++)
             x[i] = Items[i];

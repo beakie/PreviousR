@@ -20,7 +20,7 @@ struct WeakPerspectiveX: IProjection
 
     Common::Space2d::Plot getPlot(Common::Space3d::Coordinate coordinate)
     {
-        return Common::Space2d::Plot(coordinate.values[1], coordinate.values[2]);
+        return Common::Space2d::Plot(coordinate.values[2], coordinate.values[1]);
     }
 };
 

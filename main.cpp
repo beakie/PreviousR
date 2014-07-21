@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
     Common::Matrix4f m1 = Common::Matrix4<float>();
 
-    Common::Projection3d::OrthographicZ projection();
+    Common::Projection3d::Trimetric projection();
 
     return a.exec();
 }

@@ -9,7 +9,8 @@ namespace Space3d
 
 struct RotationOrder
 {
-    enum Enum{
+    enum Enum
+    {
         XYX = 1,
         XYZ = 2,
         XZX = 3,

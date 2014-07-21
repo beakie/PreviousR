@@ -76,4 +76,12 @@ HEADERS += \
     common-projection3d-weakperspectivex.h \
     common-projection3d-weakperspectivey.h \
     common-projection3d-weakperspectivez.h \
-    common-space3d-axis3d.h
+    common-space3d-axis3d.h \
+    common-projection3d-trimetric.h \
+    common-projection3d-axonometric.h \
+    common-projection3d-axonometrictype.h \
+    common-projection3d-isometric.h \
+    common-projection3d-dimetric.h \
+    common-space3d-scalar.h \
+    common-space3d-reflection.h \
+    common-space3d-translation.h
