@@ -26,7 +26,7 @@ public:
     }
 
     template <typename T>
-    static Matrix4<T> getRotationMatrix4FromMatrix3(Matrix3<T> matrix)
+    static Matrix4<T> getMatrix4FromMatrix3(Matrix3<T> matrix)
     {
         Matrix4<T> m;
         m.values[0][0] = matrix.values[0][0];
@@ -46,6 +46,35 @@ public:
     static Matrix4<float> getRotationMatrix(float x, float y, float z, float rotation)
     {
         return (new AxisAngle(x, y, z, rotation))->getMatrix();
+    }
+
+    static Matrix4<float> getScalingMatrix(Vector3<float> scalingVector)
+    {
+        Matrix4<float> m;
+        m.values[0][0] = scalingVector.values[0];
+        m.values[1][1] = scalingVector.values[1];
+        m.values[2][2] = scalingVector.values[2];
+        m.values[3][3] = 1;
+        return m;
+    }
+
+    static Matrix4<float> getTranslationMatrix(Vector3<float> translationVector)
+    {
+        Matrix4<float> m;
+        m.values[0][0] = 1;
+        m.values[0][3] = translationVector.values[0];
+        m.values[1][1] = 1;
+        m.values[1][3] = translationVector.values[1];
+        m.values[2][2] = 1;
+        m.values[2][3] = translationVector.values[2];
+        m.values[3][3] = 1;
+        return m;
+    }
+
+    static Matrix4<float> getReflectionMatrix(Vector3<float> scaleVector)
+    {
+        Matrix4<float> m;
+        return m;
     }
 
     virtual ~Helpers() { }

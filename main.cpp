@@ -46,5 +46,7 @@ int main(int argc, char *argv[])
 
     Common::Projection3d::Trimetric projection();
 
+    Common::Space3d::Helpers::getScalingMatrix(Common::Vector3<float>());
+
     return a.exec();
 }
