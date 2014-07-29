@@ -81,4 +81,5 @@ HEADERS += \
     common-projection3d-axonometric.h \
     common-projection3d-axonometrictype.h \
     common-projection3d-isometric.h \
-    common-projection3d-dimetric.h
+    common-projection3d-dimetric.h \
+    common-vector4.h

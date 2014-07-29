@@ -1,6 +1,7 @@
 #ifndef MATRIX4_H
 #define MATRIX4_H
 
+#include "common-vector4.h"
 #include "common-imatrix.h"
 
 namespace Common
@@ -97,6 +98,11 @@ struct Matrix4 : public IMatrix<TVALUE, unsigned char, Matrix4<TVALUE> >
         set(matrix);
 
         return *this;
+    }
+
+    Vector4<TVALUE> & operator*(const Vector4<TVALUE> &vector)
+    {
+        return vector;
     }
 
     Matrix4<TVALUE> & operator*(const Matrix4<TVALUE> &matrix)
