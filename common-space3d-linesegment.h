@@ -12,8 +12,8 @@ namespace Space3d
 
 struct LineSegment
 {
-    Common::Space3d::Coordinate From;
-    Common::Space3d::Coordinate To;
+    Coordinate From;
+    Coordinate To;
 
     float length()
     {

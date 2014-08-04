@@ -29,9 +29,9 @@ struct Coordinate: Vector3<float>
         return values[2];
     }
 
-    float distanceFrom(Coordinate coordinate)
+    float distanceFrom(const Coordinate &coordinate)
     {
-        return Common::Math::power(Common::Math::power(coordinate.values[0] - values[0], 2) + Common::Math::power(coordinate.values[1] - values[1], 2) + Common::Math::power(coordinate.values[2] - values[2], 2), 0.5);
+        return Math::power(Math::power(coordinate.values[0] - values[0], 2) + Math::power(coordinate.values[1] - values[1], 2) + Math::power(coordinate.values[2] - values[2], 2), 0.5);
     }
 
     Coordinate & operator+(const Coordinate &coordinate)

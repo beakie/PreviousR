@@ -16,7 +16,7 @@ struct UnitVector3 : Vector3<float>
 
     UnitVector3(Vector3<float> vector)
     {
-        float magnitude = Common::Math::power(Common::Math::power(vector.values[0], 2) + Common::Math::power(vector.values[1], 2) + Common::Math::power(vector.values[2], 2), 0.5);
+        float magnitude = Math::power(Math::power(vector.values[0], 2) + Math::power(vector.values[1], 2) + Math::power(vector.values[2], 2), 0.5);
         values[0] = vector.values[0] / magnitude;
         values[1] = vector.values[1] / magnitude;
         values[2] = vector.values[2] / magnitude;

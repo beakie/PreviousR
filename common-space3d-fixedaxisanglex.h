@@ -25,8 +25,8 @@ struct FixedAxisAngleX: IRotation
 
     Matrix4<float> getMatrix()
     {
-        float c = Common::Math::cos(Angle);
-        float s = Common::Math::sin(Angle);
+        float c = Math::cos(Angle);
+        float s = Math::sin(Angle);
 
         return Matrix4<float>(1, 0, 0, 0, 0, c, -s, 0, 0, s, c, 0, 0, 0, 0, 1);
     }

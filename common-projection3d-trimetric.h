@@ -16,9 +16,9 @@ struct Trimetric: IProjection
         return Matrix4<float>(); // todo
     }
 
-    Common::Space2d::Plot getPlot(Common::Space3d::Coordinate coordinate)
+    Space2d::Plot getPlot(Space3d::Coordinate coordinate)
     {
-        return Common::Space2d::Plot(); // todo
+        return Space2d::Plot(); // todo
     }
 };
 

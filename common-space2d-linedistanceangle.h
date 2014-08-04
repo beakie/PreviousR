@@ -16,12 +16,12 @@ struct LineDistanceAngle
 
     float x(float y)
     {
-        return (y - (Distance / Common::Math::sin(Common::Math::degreeToRadian(Angle)))) / (-(Common::Math::cos(Common::Math::degreeToRadian(Angle)) / Common::Math::sin(Common::Math::degreeToRadian(Angle))));
+        return (y - (Distance / Math::sin(Math::degreeToRadian(Angle)))) / (-(Math::cos(Math::degreeToRadian(Angle)) / Math::sin(Math::degreeToRadian(Angle))));
     }
 
     float y(float x)
     {
-        return (-(Common::Math::cos(Common::Math::degreeToRadian(Angle)) / Common::Math::sin(Common::Math::degreeToRadian(Angle)))) * x + (Distance / Common::Math::sin(Common::Math::degreeToRadian(Angle)));
+        return (-(Math::cos(Math::degreeToRadian(Angle)) / Math::sin(Math::degreeToRadian(Angle)))) * x + (Distance / Math::sin(Math::degreeToRadian(Angle)));
     }
 };
 

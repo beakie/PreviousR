@@ -14,14 +14,14 @@ namespace Space3d
 
 struct AxisAngle: IRotation
 {
-    Common::Space3d::Coordinate Axis;
+    Coordinate Axis;
     float Angle;
 
     AxisAngle()
     {
     }
 
-    AxisAngle(const Common::Space3d::Coordinate axis, const float angle)
+    AxisAngle(const Coordinate axis, const float angle)
     {
         Axis = axis;
         Angle = angle;
@@ -37,9 +37,9 @@ struct AxisAngle: IRotation
 
     Matrix4<float> getMatrix()
     {
-        float c = Common::Math::cos(Angle);
+        float c = Math::cos(Angle);
         float c_ = 1.0f - c;
-        float s = Common::Math::sin(Angle);
+        float s = Math::sin(Angle);
         Matrix4<float> matrix;
         matrix.values[0][0] = (Axis.values[0] * Axis.values[0]) + ((1 - (Axis.values[0] * Axis.values[0])) * c);
         matrix.values[0][1] = (Axis.values[0] * Axis.values[1] * c_) + (Axis.values[2] * s);

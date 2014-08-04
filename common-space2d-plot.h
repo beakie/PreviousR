@@ -27,7 +27,7 @@ struct Plot : Vector2<float>
 
     float distanceFrom(Plot plot)
     {
-        return Common::Math::power(Common::Math::power(plot.values[0] - values[0], 2) + Common::Math::power(plot.values[1] - values[1], 2), 0.5);
+        return Math::power(Math::power(plot.values[0] - values[0], 2) + Math::power(plot.values[1] - values[1], 2), 0.5);
     }
 
     Plot getOffset(Plot plot)
